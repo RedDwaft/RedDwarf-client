@@ -1,0 +1,5 @@
+Please see https://sourceforge.net/apps/trac/reddwarf/wiki/Documentation
+for the latest tutorial documents.  Later versions of RedDwarf should
+contain a new and improved tutorial for consumption as part of the
+distribution.  The tutorial code available in the src directory should
+be applicable to the tutorials found at the location above.

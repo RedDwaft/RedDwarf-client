@@ -1,0 +1,70 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                      http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>org.reddwarfserver.client</groupId>
+    <artifactId>sgs-client-parent</artifactId>
+    <version>0.10.3-SNAPSHOT</version>
+  </parent>
+
+  <artifactId>sgs-client-dist</artifactId>
+  <name>RedDwarf Client Distribution</name>
+  <packaging>pom</packaging>
+  <description>
+    The sgs-client-dist module produces a zip artifact
+    which is the main distribution of the darkstar client intended
+    for external consumption
+  </description>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.reddwarfserver.client</groupId>
+      <artifactId>sgs-client</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.reddwarfserver.client</groupId>
+      <artifactId>sgs-client-javadoc</artifactId>
+      <classifier>api</classifier>
+    </dependency>
+
+    <dependency>
+      <groupId>org.reddwarfserver.client</groupId>
+      <artifactId>sgs-tutorial-client-dist</artifactId>
+      <type>zip</type>
+    </dependency>
+
+  </dependencies>
+
+
+  <!-- Zip artifact is generated with the assembly plugin
+       and assembled according to the dist.xml assembly descriptor -->
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-assembly-plugin</artifactId>
+        <configuration>
+          <descriptors>
+            <descriptor>src/main/assembly/dist.xml</descriptor>
+          </descriptors>
+        </configuration>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>attached</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+
+
+
+  
+
+</project>
