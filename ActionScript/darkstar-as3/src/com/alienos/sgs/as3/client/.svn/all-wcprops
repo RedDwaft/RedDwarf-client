@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/11/trunk/darkstar-as3/src/com/alienos/sgs/as3/client
+END
+SgsEvent.as
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/11/trunk/darkstar-as3/src/com/alienos/sgs/as3/client/SgsEvent.as
+END
+ClientChannel.as
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/11/trunk/darkstar-as3/src/com/alienos/sgs/as3/client/ClientChannel.as
+END
+SimpleClient.as
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/11/trunk/darkstar-as3/src/com/alienos/sgs/as3/client/SimpleClient.as
+END
+MessageFilter.as
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/11/trunk/darkstar-as3/src/com/alienos/sgs/as3/client/MessageFilter.as
+END

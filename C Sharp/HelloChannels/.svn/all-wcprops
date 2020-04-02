@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 35
+/svn/!svn/ver/8/trunk/HelloChannels
+END
+HelloChannels.csproj
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/6/trunk/HelloChannels/HelloChannels.csproj
+END
+HelloChannels.resx
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/2/trunk/HelloChannels/HelloChannels.resx
+END
+HelloChannels.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/8/trunk/HelloChannels/HelloChannels.Designer.cs
+END
+HelloChannels.cs
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/6/trunk/HelloChannels/HelloChannels.cs
+END
+app.config
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/2/trunk/HelloChannels/app.config
+END
+Login.resx
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/6/trunk/HelloChannels/Login.resx
+END
+Program.cs
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/2/trunk/HelloChannels/Program.cs
+END
+Login.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/7/trunk/HelloChannels/Login.Designer.cs
+END
+Login.cs
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/7/trunk/HelloChannels/Login.cs
+END

@@ -1,0 +1,172 @@
+<html>
+<head>
+<title>RedDwarf-JS Example</title>
+
+<script src="/static/Orbited.js"></script>
+
+<script>
+document.domain           = document.domain;
+document.port             = document.port;
+Orbited.settings.hostname = 'localhost';
+Orbited.settings.port     = 9000;
+</script>
+
+<script src="red_dwarf.js"></script>
+
+<script>
+var client;
+
+function login(userName, password) {
+  client = new RedDwarf.SimpleClient('localhost', 1139);
+
+  client.registerListener({
+    on_loginSuccess:   function(event, client) {       justLoggedIn(                              ); },
+    on_loginFailure:   function(event, client) {  justFailedToLogIn(                              ); },
+    on_logout:         function(event, client) {      justLoggedOut(                              ); },
+    on_sessionMessage: function(event, client) { showSessionMessage(                event.message ); },
+    on_channelMessage: function(event, client) { showChannelMessage( event.channel, event.message ); },
+    on_channelJoin:    function(event, client) {  justJoinedChannel( event.channel                ); },
+    on_channelLeave:   function(event, client) {    justLeftChannel( event.channel                ); }
+  });
+
+  client.login(userName || "guest-123", password || "");
+}
+
+/*
+The rest of this file is probably not that interesting. The main stuff you need to see
+is the call to registerListener (above) and this list of available methods:
+
+    client.login(username, password)
+    client.logout()
+    client.sessionSend(message)
+    client.channelSend(channel, message)
+    client.getChannelWithID(id)
+
+    channel.id()
+    channel.name()
+
+*/
+
+
+
+
+function logout() {
+  client.logout();
+  client = null;
+  clearChannelSelector();
+}
+
+function clearChannelSelector() {
+  var channelSelector = document.getElementById("channelSelector");
+  channelSelector.selectedIndex = 0;
+  for (var i = channelSelector.options.length - 1; i >= 1; --i) {
+    channelSelector.removeChild(channelSelector.options[i]);
+  }
+}
+
+function sendMessage(msg) {
+  var channelSelector = document.getElementById("channelSelector");
+  if (channelSelector.value === "_default_") {
+    client.sessionSend(msg);
+    showMessage(msg, "#0000aa");
+  } else {
+    var channel = client.getChannelWithID(parseInt(channelSelector.value));
+    client.channelSend(channel, msg);
+    showMessage("[" + channel + "]: " + msg, "#0000aa");
+  }
+}
+
+function showSessionMessage(msg         ) { showMessage(msg,                         "#00aa00"); }
+function showChannelMessage(channel, msg) { showMessage("[" + channel + "]: " + msg, "#00aa00"); }
+function justLoggedIn()                   { showMessage("Logged in!",                "#00aa00"); }
+function justLoggedOut()                  { showMessage("Logged out.",               "#00aa00"); }
+function justFailedToLogIn()              { showMessage("Login failure!",            "#aa0000"); }
+
+function showMessage(msg, color) {
+  var paragraph = document.createElement('p');
+  var lines = msg.split("\n");
+  for (var i = 0, n = lines.length; i < n; ++i) {
+    paragraph.appendChild(document.createTextNode(lines[i]));
+    paragraph.appendChild(document.createElement("br"));
+  }
+  paragraph.style.color = color;
+  document.getElementById('log').appendChild(paragraph);
+  return msg;
+}
+
+function justJoinedChannel(channel) {
+  var channelSelector = document.getElementById("channelSelector");
+  var option = document.createElement("option");
+  option.value = channel.id();
+  option.appendChild(document.createTextNode(channel.name()));
+  channelSelector.appendChild(option);
+  showMessage("Joined channel " + channel, "#00aa00");
+}
+
+function justLeftChannel(channel) {
+  var channelSelector = document.getElementById("channelSelector");
+  var option = document.getElementById("channel_" + channel.id());
+  channelSelector.removeChild(option);
+  showMessage("Left channel " + channel, "#00aa00");
+}
+
+function doCommand() {
+  try {
+    var cmdBox = document.getElementById('cmdBox');
+    var cmd = cmdBox.value;
+    if (cmd.indexOf("login") === 0) {
+      if (client) {
+        showMessage("You're already logged in.", "#aa0000");
+      } else {
+        login(cmd.split(" ")[1]);
+      }
+    } else if (!client) {
+      showMessage("You'd better log in first.", "#aa0000");
+    } else if (cmd === "logout") {
+      logout();
+    } else {
+      sendMessage(cmd)
+    }
+    cmdBox.value = "";
+  } catch (x) {
+    try {
+      showMessage("Exception: " + x);
+    } catch (xx) { // in case showMessage itself is broken
+      if (typeof(console) !== 'undefined') {
+        console.error(x);
+      } else {
+        alert(x);
+      }
+    }
+  }
+  return false;
+}
+</script>
+
+</head>
+
+<body>
+
+<h1>RedDwarf-JS client example</h1>
+
+<select id="channelSelector">
+  <option value="_default_">[session]</option>
+</select>
+
+<div id="log">
+</div>
+
+<form onsubmit="return doCommand()">
+  <input id="cmdBox">
+</form>
+
+<p>Available commands for SwordWorld:</p>
+<ul>
+  <li>login</li>
+  <li>logout</li>
+  <li>look</li>
+</ul>
+
+</body>
+
+</html>

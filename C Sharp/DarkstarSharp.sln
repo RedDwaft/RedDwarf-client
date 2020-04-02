@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual C# Express 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DarkstarSharpLib", "DarkstarSharpLib\DarkstarSharpLib.csproj", "{9C7F2C7E-1364-4425-B66B-F5BF9956691C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloChannels", "HelloChannels\HelloChannels.csproj", "{7004B5B1-5C37-4AAA-AE24-F0EB1EC17F46}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9C7F2C7E-1364-4425-B66B-F5BF9956691C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C7F2C7E-1364-4425-B66B-F5BF9956691C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C7F2C7E-1364-4425-B66B-F5BF9956691C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C7F2C7E-1364-4425-B66B-F5BF9956691C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7004B5B1-5C37-4AAA-AE24-F0EB1EC17F46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7004B5B1-5C37-4AAA-AE24-F0EB1EC17F46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7004B5B1-5C37-4AAA-AE24-F0EB1EC17F46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7004B5B1-5C37-4AAA-AE24-F0EB1EC17F46}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

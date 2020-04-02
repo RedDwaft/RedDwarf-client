@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/svn/!svn/ver/4/trunk/DarkstarSharpLib
+END
+ClientChannel.cs
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/2/trunk/DarkstarSharpLib/ClientChannel.cs
+END
+Converter.cs
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/2/trunk/DarkstarSharpLib/Converter.cs
+END
+SimpleClient.cs
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/3/trunk/DarkstarSharpLib/SimpleClient.cs
+END
+DarkstarSharpLib.csproj.user
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/2/trunk/DarkstarSharpLib/DarkstarSharpLib.csproj.user
+END
+SimpleSgsProtocol.cs
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/2/trunk/DarkstarSharpLib/SimpleSgsProtocol.cs
+END
+MessageFilter.cs
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/2/trunk/DarkstarSharpLib/MessageFilter.cs
+END
+FilterListener.cs
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/2/trunk/DarkstarSharpLib/FilterListener.cs
+END
+DarkstarSharpLib.csproj
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/4/trunk/DarkstarSharpLib/DarkstarSharpLib.csproj
+END
+ClientChannelListener.cs
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/2/trunk/DarkstarSharpLib/ClientChannelListener.cs
+END
+SimpleClientListener.cs
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/2/trunk/DarkstarSharpLib/SimpleClientListener.cs
+END
+BigInteger.cs
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/2/trunk/DarkstarSharpLib/BigInteger.cs
+END
+app.config
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/2/trunk/DarkstarSharpLib/app.config
+END
+PasswordAuthentication.cs
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/2/trunk/DarkstarSharpLib/PasswordAuthentication.cs
+END
